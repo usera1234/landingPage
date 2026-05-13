@@ -1,0 +1,122 @@
+*{
+    margin:0px;
+    padding:0;
+    box-sizing:border-box;
+}
+
+    body{
+      font-family:'Inter', sans-serif;
+      background:#f5f7fb;
+      color:#111827;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .card{
+      background:white;
+      width:100%;
+      max-width:1100px;
+      border-radius:28px;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      box-shadow:0 20px 60px rgba(0,0,0,.08);
+    }
+
+    .content{
+      padding:70px 60px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#eef2ff;
+      color:#4f46e5;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+      margin-bottom:24px;
+      width:fit-content;
+    }
+
+    h1{
+      font-size:56px;
+      line-height:1.05;
+      margin-bottom:24px;
+      font-weight:800;
+      letter-spacing:-2px;
+    }
+
+    p{
+      font-size:18px;
+      line-height:1.7;
+      color:#6b7280;
+      margin-bottom:36px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:16px 24px;
+      border:none;
+      border-radius:14px;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+      transition:.2s;
+    }
+
+    .btn-primary{
+      background:#111827;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      background:#eef2ff;
+      color:#111827;
+    }
+
+    .image{
+      background:
+      linear-gradient(rgba(17,24,39,.2), rgba(17,24,39,.2)),
+      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      min-height:500px;
+    }
+
+    @media(max-width:900px){
+
+      .card{
+        grid-template-columns:1fr;
+      }
+
+      .content{
+        padding:50px 30px;
+      }
+
+      h1{
+        font-size:40px;
+      }
+
+      .image{
+        min-height:320px;
+      }
+    }
