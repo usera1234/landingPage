@@ -72,18 +72,19 @@
     min-height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 80px;
+    padding-top: 70px;
   }
 
   /* Left: cartoon decoration */
   .hero-visual {
-    background: white;
+    background: var(--peach);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px;
     position: relative;
     overflow: hidden;
+    animation: floatIn 1.2s ease forwards;
   }
 
   .hero-visual::before {
@@ -105,8 +106,8 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: transparent;
-  color: var(--terracotta);
+  background: var(--terracotta);
+  color: white;
   text-decoration: none;
   padding: 14px 28px;
   font-size: 0.82rem;
@@ -119,7 +120,7 @@
 }
 
 .hero-cta-secondary:hover {
-  background: var(--terracotta);
+  background: var(--terracota);
   color: white;
 }
 
@@ -128,8 +129,8 @@
   }
 
   .cartoon-container img {
-    width: 100%;
-    border-radius: 4px;
+    width: 60%;
+    border-radius: 50%;
     filter: drop-shadow(0 8px 32px rgba(0,0,0,0.1));
   }
 
@@ -146,7 +147,7 @@
   .cartoon-caption strong {
     display: block;
     font-style: normal;
-    color: var(--terracotta);
+    color: var(--peach);
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -156,7 +157,7 @@
 
   /* Right: hero content */
   .hero-content {
-    background: white;
+    background: var(--peach);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,7 +187,7 @@
     display: block;
     width: 32px;
     height: 1px;
-    background: var(--terracotta);
+    background: var(--peach);
   }
 
   .hero-headline {
