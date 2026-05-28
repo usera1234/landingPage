@@ -85,6 +85,7 @@
     position: relative;
     overflow: hidden;
     animation: floatIn 1.2s ease forwards;
+    border: none;
   }
 
   .hero-visual::before {
@@ -130,8 +131,9 @@
 
   .cartoon-container img {
     width: 60%;
-    border-radius: 50%;
+    border-radius: 20px;
     filter: drop-shadow(0 8px 32px rgba(0,0,0,0.1));
+    margin-left: 350px;
   }
 
   .cartoon-caption {
@@ -165,6 +167,7 @@
     animation: slideRight 1s ease 0.3s forwards;
     opacity: 0;
     transform: translateX(20px);
+    border: none;
   }
 
   @keyframes slideRight {
@@ -315,8 +318,8 @@
   }
 
   .stat-label {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.5);
+    font-size: 1.5rem;
+    color: var(--terracotta-light);
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
@@ -372,7 +375,7 @@
   #que-hacemos {
     background: white;
     max-width: 100%;
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   #que-hacemos .inner {
