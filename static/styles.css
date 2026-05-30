@@ -300,7 +300,7 @@
 
 .about-image{
   position: relative;
-  
+
 }
 
 .about-image img{
@@ -359,9 +359,9 @@
 }
   /* SECTION BASE */
   section {
-    padding: 100px 60px;
+    padding-top: 100px ;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 ;
   }
 
   .section-eyebrow {
@@ -492,11 +492,19 @@
   }
 
   /* SERVICES */
+  .services {
+    width: 1920px;
+    background-color: white;
+    position: relative;
+    padding: 100px 300px 100px 300px;
+  }
+
   .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     margin-top: 60px;
+    background-color: white;
   }
 
   .service-card {
