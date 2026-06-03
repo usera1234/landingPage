@@ -227,82 +227,148 @@
   .hero-visual img { max-height: 400px; }
 }
 
-  /* SOBRE MI */
-
-.about-section{
-  padding: 110px 20px;
+ .about-section {
   background: rgb(242, 242, 242);
+  max-width: 100%;
+  padding: 100px 0;
 }
 
-.about-grid{
+.about-inner {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 80px;
-  align-items: center;
+  padding: 0 60px;
 }
 
-.about-image{
-  position: relative;
+.about-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-item:first-of-type { padding-top: 0; }
+.about-item:last-of-type { border-bottom: none; }
+
+.about-item-reverse {
+  direction: rtl;
+}
+
+.about-item-reverse > * {
+  direction: ltr;
+}
+
+.about-item-img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-item-img img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: 12px;
+}
+
+.about-item-img-highlight {
+  overflow: visible;
+}
+
+.about-highlight-box {
+  background: var(--peach);
+  border-radius: 12px;
+  padding: 48px 40px;
+  height: 360px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  justify-content: center;
+  position: relative;
 }
 
-.about-image img{
-  width: 100%;
-  border-radius: 24px;
-  object-fit: cover;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-}
-
-.about-content h2{
-  margin-bottom: 28px;
-}
-
-.about-content p{
-  font-size: 1.3rem;
-  color: var(--mid);
-  line-height: 1.9;
-  margin-bottom: 18px;
-  max-width: 720px;
-}
-
-.about-content strong{
-  color: var(--dark);
-  font-weight: 500;
-}
-
-.about-highlight{
-  margin-top: 34px;
-  padding-left: 22px;
-  border-left: 3px solid var(--terracotta);
+.about-highlight-quote {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  color: var(--dark);
+  font-size: 5rem;
+  color: var(--terracotta);
+  opacity: 0.2;
+  line-height: 0.7;
+  margin-bottom: 16px;
 }
 
-@media (max-width: 900px){
+.about-highlight-box p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--dark);
+  line-height: 1.55;
+}
 
-  .about-section{
-    padding: 80px 24px;
-  }
+.about-item-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--terracotta);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
 
-  .about-grid{
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
+.about-item-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--dark);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 
-  .about-image{
-    max-width: 420px;
-    margin: 0 auto;
-  }
+.about-item-intro {
+  font-size: 1.5rem;
+  color: var(--mid);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
 
-  .about-highlight{
-    font-size: 1.2rem;
-  }
+.about-item-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.about-item-list li {
+  font-size: 1.2rem;
+  color: var(--mid);
+  padding: 5px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-item-list li:last-child { border-bottom: none; }
+
+.about-item-list li::before {
+  content: '·';
+  color: var(--terracotta);
+  font-size: 1.2rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.about-item-result {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--terracotta);
+}
+
+@media (max-width: 900px) {
+  .about-inner { padding: 0 24px; }
+  .about-item { grid-template-columns: 1fr; gap: 32px; direction: ltr; }
+  .about-item-reverse { direction: ltr; }
+  .about-item-img img { height: 260px; }
+  .about-highlight-box { height: auto; padding: 36px 28px; }
 }
   /* SECTION BASE */
   section {
@@ -880,7 +946,7 @@
   }
 
   #testimonios .inner {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 60px;
   }
@@ -888,15 +954,16 @@
   .testimonios-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
     margin-top: 60px;
+    max-width: 2400px;
   }
 
   .testimonio {
     background: var(--cream);
     padding: 40px 32px;
-    border-radius: 2px;
+    border-radius: 10px;
     position: relative;
+    max-width: 400px;
   }
 
   .testimonio::before {
@@ -912,12 +979,13 @@
 
   .testimonio-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     font-style: italic;
     color: var(--dark);
     line-height: 1.7;
     margin-bottom: 24px;
     padding-top: 16px;
+    min-height: 610px;
   }
 
   .testimonio-author {
@@ -928,11 +996,58 @@
   .testimonio-author strong {
     display: block;
     color: var(--dark);
-    font-size: 0.88rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 2px;
     font-family: 'DM Sans', sans-serif;
   }
+
+  .testimonio-author {
+  font-size: 0.8rem;
+  color: var(--mid);
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.test-author-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--mid);
+  transition: color 0.2s;
+}
+
+.test-author-link:hover {
+  color: var(--terracotta);
+}
+
+.test-author-link svg {
+  width: 60px;
+  height: 60px;
+  fill: var(--muted);
+  flex-shrink: 0;
+  transition: fill 0.2s;
+}
+
+.test-author-link:hover svg {
+  fill: var(--terracotta);
+}
+
+.test-author-link strong {
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark);
+}
+
+.test-author-link:hover strong {
+  color: var(--terracotta);
+}
 
   /* CIERRE */
   .cierre {
@@ -1026,7 +1141,7 @@
 
   .footer-name {
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     color: white;
   }
 
@@ -1036,7 +1151,7 @@
   }
 
   .footer-tagline {
-    font-size: 0.78rem;
+    font-size: 1.4rem;
     color: rgba(255,255,255,0.35);
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -1052,7 +1167,7 @@
   .footer-links a {
     color: rgba(255,255,255,0.5);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 0.04em;
     display: flex;
     align-items: center;
@@ -1063,7 +1178,7 @@
   .footer-links a:hover { color: var(--terracotta-light); }
 
   .linkedin-icon {
-    width: 18px; height: 18px;
+    width: 40px; height: 40px;
     fill: currentColor;
   }
 
