@@ -99,7 +99,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 0.72rem;
+  font-size: 1rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
@@ -1204,21 +1204,106 @@
     transform: translateY(0);
   }
 
-  /* Responsive */
-  @media (max-width: 900px) {
-    nav { padding: 18px 24px; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-visual { min-height: 40vh; }
-    .hero-content { padding: 60px 30px; }
-    section { padding: 70px 24px; }
-    .pillars-grid { grid-template-columns: 1fr; }
-    .services-grid { grid-template-columns: 1fr; }
-    .problems-full { grid-template-columns: 1fr; }
-    .exp-grid { grid-template-columns: 1fr; }
-    .testimonios-grid { grid-template-columns: 1fr; }
-    footer { padding: 40px 24px; flex-direction: column; text-align: center; }
-    .stats { flex-wrap: wrap; }
-    .stat { min-width: 140px; }
-    #que-hacemos .inner, #por-que .inner, #testimonios .inner { padding: 0 24px; }
+ /* RESPONSIVE */
+@media (max-width: 900px) {
+
+  /* NAV */
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 70px;
+    align-items: center;
   }
+  .hero-content { padding: 40px 24px; }
+  .hero-headline { font-size: 2.2rem; }
+  .hero-eyebrow { font-size: 0.75rem; }
+  .hero-bullets li { font-size: 1rem; }
+  .hero-p { font-size: 1.1rem; }
+  .hero-cta-secondary { font-size: 0.9rem; padding: 12px 20px; }
+  .hero-visual { max-height: 450px; justify-content: center; }
+  .hero-visual img { width: 60%; border-radius: 20px; }
+  .contactarnos-row { gap: 12px; }
+
+  /* SECTIONS BASE */
+  section { padding: 60px 24px; max-width: 100%; }
+  h2 { font-size: 1.8rem; }
+  .section-eyebrow { font-size: 0.72rem; }
+  .section-lead { font-size: 0.95rem; max-width: 100%; }
+
+  /* SERVICIOS */
+  .srv-inner { padding: 0 20px; }
+  .srv-row { grid-template-columns: 1fr; gap: 16px; }
+  .srv-card h3 { font-size: 1.1rem; min-height: auto; }
+  .srv-card-list li { font-size: 0.88rem; }
+  .srv-card-result { font-size: 0.85rem; }
+
+  /* COMO TRABAJO */
+  .como-inner { padding: 0 20px; }
+  .como-split { grid-template-columns: 1fr; gap: 28px; }
+  .como-imagen img { height: 240px; }
+  .como-content p { font-size: 0.95rem; }
+  .como-resultado { font-size: 0.95rem; }
+  .como-pilares { grid-template-columns: 1fr; }
+  .como-pilar-body h3 { font-size: 1.1rem; text-align: left; }
+  .como-pilar-body p { font-size: 0.9rem; text-align: left; }
+  .como-pilares-titulo { font-size: 1.8rem; justify-content: flex-start; }
+
+  /* EXPERIENCIA */
+  .exp-inner { padding: 0 20px; }
+  .exp-cards-grid { grid-template-columns: 1fr; }
+  .exp-cards-last-row { flex-direction: column; }
+  .exp-cards-last-row .exp-card-v2 { width: 100%; }
+  .exp-card-v2 p { font-size: 0.88rem; }
+  .exp-card-impact { font-size: 0.85rem; }
+  .exp-card-img { width: 90px; height: 70px; }
+
+  /* TESTIMONIOS */
+  #testimonios { padding: 60px 0; }
+  #testimonios .inner { padding: 0 20px; }
+  .testimonios-grid { grid-template-columns: 1fr; gap: 16px; }
+  .testimonio-text { font-size: 1rem; min-height: auto; }
+  .test-author-link svg { width: 20px; height: 20px; }
+  .test-author-link strong { font-size: 0.85rem; }
+
+  /* SOBRE MI */
+  .about-inner { padding: 0 20px; }
+  .about-item {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    direction: ltr;
+    padding: 36px 0;
+  }
+  .about-item-reverse { direction: ltr; }
+  .about-item-img img { height: 260px; }
+  .about-highlight-box { height: auto; padding: 32px 24px; }
+  .about-highlight-box p { font-size: 1rem; }
+  .about-item-content h3 { font-size: 1.1rem; }
+  .about-item-intro { font-size: 0.9rem; }
+  .about-item-list li { font-size: 0.88rem; }
+  .about-item-result { font-size: 0.88rem; }
+
+  /* FOOTER */
+  footer {
+    padding: 36px 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-name { font-size: 1.2rem; }
+  .footer-tagline { font-size: 0.75rem; }
+  .footer-links { justify-content: center; gap: 20px; }
+  .footer-links a { font-size: 1rem; }
+  .linkedin-icon { width: 20px; height: 20px; }
+}
+
+@media (max-width: 480px) {
+  .hero-headline { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  .hero-visual img { width: 90%; }
+  .srv-card-num { font-size: 2rem; }
+  .contactarnos-row { flex-direction: column; align-items: flex-start; }
+}
