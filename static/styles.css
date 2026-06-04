@@ -528,8 +528,13 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 26px;
   border-radius: 12px;
-  overflow: hidden;
-  align-items: stretch
+  overflow: visible;
+  align-items: stretch;
+}
+
+.srv-card:hover .srv-card-num {
+  color: var(--terracotta);
+  opacity: 1;
 }
 
 .srv-card {
@@ -558,11 +563,12 @@
   color: var(--line);
   line-height: 1;
   transition: color 0.3s;
+  display: block;
 }
 
 .srv-card:hover .srv-card-num {
-  color: var(--terracotta);
-  opacity: 0.3;
+  color: var(--terracotta) !important;
+  opacity: 1 !important;
 }
 
 .srv-card h3 {
