@@ -474,11 +474,11 @@
   margin-top: auto;
 }
 .srv-card-intro {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--terracotta-light);
   line-height: 1.6;
   font-style: italic;
-  min-height: 125px;
+  min-height: 80px;
 }
 @media (max-width: 900px) {
   .srv-inner { padding: 0 24px; }
