@@ -924,24 +924,24 @@
 
   .testimonio-text-1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-style: italic;
     color: var(--dark);
     line-height: 1.7;
     margin-bottom: 24px;
     padding-top: 16px;
-    min-height: 1000px;
+    min-height: 700px;
   }
 
   .testimonio-text-2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-style: italic;
     color: var(--dark);
     line-height: 1.7;
     margin-bottom: 24px;
     padding-top: 16px;
-    min-height: 660px;
+    min-height: 450px;
   }
 
   .testimonio-author {
@@ -1307,8 +1307,9 @@
 @media (max-width: 900px) {
 
   /* NAV */
-  nav { padding: 16px 20px; }
-  .nav-links { display: none; }
+  nav { position: fixed; padding: 16px 20px; flex-direction: column;}
+  .nav-links { flex-direction: column; gap: 10px;}
+  .nav-links a { font-size: 0.8rem; }
 
   /* HERO */
   .hero {
