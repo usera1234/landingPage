@@ -369,7 +369,7 @@
 }
 
 .srv-inner {
-  max-width: 1400px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 60px;
 }
@@ -382,7 +382,7 @@
 
 .srv-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 26px;
   border-radius: 12px;
   overflow: visible;
@@ -433,7 +433,7 @@
   font-size: 1.8rem;
   color: var(--dark);
   line-height: 1.35;
-  min-height: 160px;
+  min-height: 130px;
   margin-bottom: 8px;
 }
 
@@ -474,11 +474,11 @@
   margin-top: auto;
 }
 .srv-card-intro {
-  font-size: 0.88rem;
-  color: var(--muted);
+  font-size: 1.2rem;
+  color: var(--terracotta-light);
   line-height: 1.6;
-  margin-bottom: 52px;
   font-style: italic;
+  min-height: 125px;
 }
 @media (max-width: 900px) {
   .srv-inner { padding: 0 24px; }
@@ -696,7 +696,7 @@
 .exp-section {
   background: white;
   max-width: 100%;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 
 .exp-inner {
@@ -806,6 +806,59 @@
 
 .exp-cards-last-row .exp-card-v2 {
   width: calc(33.333% - 10px);
+}
+/* TIRA DE LOGOS */
+.logos-strip {
+  background: gray;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logos-strip-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logos-strip-label {
+  font-size: 2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(white);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logos-strip-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.logo-item:hover {
+  opacity: 0.9;
+}
+
+.logo-item img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .logos-strip-inner { padding: 0 24px; }
+  .logos-strip-row { gap: 28px; }
+  .logo-item img { height: 28px; }
 }
 
  /* TESTIMONIOS */
@@ -1284,6 +1337,12 @@
   .exp-card-impact { font-size: 0.85rem; }
   .exp-card-img { width: 90px; height: 70px; }
 
+  /* TIRA DE LOGOS */
+  .logos-strip-inner { padding: 0 24px; }
+  .logos-strip-row { gap: 20px; flex-direction: column; }
+  .logo-item img { height: 150px; }
+  .logos-strip-label { font-size: 0.65rem; margin-bottom: 20px; }
+
   /* TESTIMONIOS */
   #testimonios { padding: 60px 0; }
   #testimonios .inner { padding: 0 20px; }
@@ -1329,4 +1388,7 @@
   .hero-visual img { margin-bottom: 20px; width: 70%}
   .srv-card-num { font-size: 2rem; }
   .contactarnos-row { flex-direction: column; align-items: flex-start; }
+  .logos-strip-row { gap: 20px; }
+  .logo-item img { height: 80px; }
+  .logos-strip { padding: 36px 0; }
 }
