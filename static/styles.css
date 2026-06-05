@@ -38,7 +38,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 60px;
+    padding: 10px 30px;
     background: rgba(250, 247, 244, 0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
@@ -46,7 +46,7 @@
 
   .nav-logo {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 2.8rem;
     color: var(--dark);
     letter-spacing: 0.02em;
   }
@@ -58,7 +58,7 @@
 
   .nav-links {
     display: flex;
-    gap: 36px;
+    gap: 56px;
     list-style: none;
   }
 
@@ -69,13 +69,18 @@
   .nav-links a {
     text-decoration: none;
     color: var(--mid);
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     transition: color 0.2s;
   }
 
   .nav-links a:hover { color: var(--terracotta); }
+
+@media (min-width: 901px) and (max-width: 1700px) {
+  .nav-logo { font-size: 2.5rem; }
+  .nav-links { gap: 16px; }
+}
 
 /* HERO */
 .hero {
@@ -120,7 +125,7 @@
 
 .hero-headline {
   font-family: 'KG Inimitable', cursive;
-  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-size: 3rem;
   line-height: 1.15;
   color: var(--dark);
   margin-bottom: 28px;
@@ -143,7 +148,7 @@
 }
 
 .hero-bullets li {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--mid);
   line-height: 1.65;
   padding-left: 14px;
@@ -151,7 +156,7 @@
 
 .hero-p {
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--mid);
   line-height: 1.65;
   padding-left: 14px;
@@ -173,7 +178,7 @@
   border-radius: 999px;
   background: var(--terracotta);
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -277,6 +282,17 @@
     margin-bottom: 20px;
     line-height: 1.8;
   }
+
+  /* SCROLL OFFSET para nav fijo */
+#servicios,
+#como-trabajo {
+  scroll-margin-top: 80px;
+}
+#experiencia,
+#testimonios,
+#sobre-mi {
+  scroll-margin-top: 80px;
+}
 
   /*linkedin */
 
