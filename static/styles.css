@@ -809,32 +809,48 @@
 }
 /* TIRA DE LOGOS */
 .logos-strip {
-  background: gray;
+  background: rgb(128, 128, 128);
   width: 100%;
-  padding: 20px 0;
+  padding: 48px 0;
+  overflow: hidden;
 }
 
 .logos-strip-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 100%;
 }
 
 .logos-strip-label {
-  font-size: 2rem;
+  font-size: 0.7rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(white);
+  color: rgba(255,255,255,0.3);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
+  padding: 0 60px;
 }
 
-.logos-strip-row {
+.logos-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.logos-track {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
+  gap: 64px;
+  width: max-content;
+  animation: scrollLogos 24s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scrollLogos {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-50%)); }
+}
+
+@keyframes scrollLogosExact {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-30% - 10px)); }
 }
 
 .logo-item {
@@ -842,6 +858,7 @@
   align-items: center;
   justify-content: center;
   transition: opacity 0.2s;
+  flex-shrink: 0;
 }
 
 .logo-item:hover {
@@ -849,16 +866,22 @@
 }
 
 .logo-item img {
-  height: 100px;
+  height: 125px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
 @media (max-width: 900px) {
-  .logos-strip-inner { padding: 0 24px; }
-  .logos-strip-row { gap: 28px; }
-  .logo-item img { height: 28px; }
+  .logos-strip { padding: 36px 0; }
+  .logos-strip-label { padding: 0 24px; font-size: 0.65rem; margin-bottom: 20px; }
+  .logo-item img { height: 26px; }
+  .logos-track { gap: 40px; animation-duration: 18s; }
+}
+
+@media (max-width: 480px) {
+  .logo-item img { height: 20px; }
+  .logos-track { gap: 28px; animation-duration: 14s; }
 }
 
  /* TESTIMONIOS */

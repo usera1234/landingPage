@@ -212,7 +212,7 @@
       </div>
 
       <div class="exp-card-v2">
-        <img src="static/exp_grangys.jfif" class="exp-card-img">
+        <img src="static/exp_grangys.png" class="exp-card-img">
         <div class="exp-card-tag">Fractional CMO</div>
         <p>Me desempeño como Fractional CMO, liderando de forma integral la estrategia y ejecución de marketing de la compañía.
            Trabajo en la definición y gestión del portafolio, desarrollo de productos y packs, estrategia de comunicación y coordinación del equipo de marketing.
@@ -222,7 +222,7 @@
       </div>
 
       <div class="exp-card-v2">
-        <img src="static/exp_timbo.jfif" class="exp-card-img">
+        <img src="static/exp_timbo.png" class="exp-card-img">
         <div class="exp-card-tag">Profesionalización del área</div>
         <p>Me incorporé a un equipo de marketing existente con fuerte foco operativo, pero sin una mirada estratégica clara ni un rumbo definido.
            Trabajé en la reorganización del equipo, definiendo prioridades y alineando roles. Implementé un sistema de indicadores clave, junto con la forma de analizarlos y presentarlos al comité de dirección.
@@ -283,39 +283,46 @@
     </div>
   </div>
 </section>
+
 <!-- TIRA DE LOGOS -->
 <div class="logos-strip">
   <div class="logos-strip-inner">
-    <div class="logos-strip-row">
-      
-      <div class="logo-item">
-        <img src="static/jumbo.png" alt="Jumbo">
-      </div>
+    <div class="logos-track-wrapper">
+      <div class="logos-track">
+        <div class="logo-item"><img src="static/exp_olx.png" alt="Empresa 8"></div>
+        <div class="logo-item"><img src="static/jumbo.png" alt="Empresa 1"></div>
+        <div class="logo-item"><img src="static/disco.png" alt="Empresa 2"></div>
+        <div class="logo-item"><img src="static/vea.png" alt="Empresa 3"></div>
+        <div class="logo-item"><img src="static/molinoCañuelas.png" alt="Empresa 4"></div>
+        <div class="logo-item"><img src="static/kimberlyClark.png" alt="Empresa 5"></div>
+        <div class="logo-item"><img src="static/molinosRdlP.png" alt="Empresa 6"></div>
+        <div class="logo-item"><img src="static/nabisco.png" alt="Empresa 7"></div>
+        <!-- Duplicado para loop infinito -->
+        <div class="logo-item"><img src="static/exp_grangys.png" alt="Empresa 1"></div>
+        <div class="logo-item"><img src="static/exp_timbo.png" alt="Empresa 2"></div>
+        <div class="logo-item"><img src="static/exp_lucchetti.png" alt="Empresa 3"></div>
+        <div class="logo-item"><img src="static/exp_instacarro.png" alt="Empresa 4"></div>
+        <div class="logo-item"><img src="static/exp_hileret.png" alt="Empresa 5"></div>
+        <div class="logo-item"><img src="static/exp_urdapilleta.png" alt="Empresa 6"></div>
+        <div class="logo-item"><img src="static/exp-gaia.png" alt="Empresa 7"></div>
 
-      <div class="logo-item">
-        <img src="static/disco.png" alt="Disco">
-      </div>
+        <div class="logo-item"><img src="static/exp_olx.png" alt="Empresa 8"></div>
+        <div class="logo-item"><img src="static/jumbo.png" alt="Empresa 1"></div>
+        <div class="logo-item"><img src="static/disco.png" alt="Empresa 2"></div>
+        <div class="logo-item"><img src="static/vea.png" alt="Empresa 3"></div>
+        <div class="logo-item"><img src="static/molinoCañuelas.png" alt="Empresa 4"></div>
+        <div class="logo-item"><img src="static/kimberlyClark.png" alt="Empresa 5"></div>
+        <div class="logo-item"><img src="static/molinosRdlP.png" alt="Empresa 6"></div>
+        <div class="logo-item"><img src="static/nabisco.png" alt="Empresa 7"></div>
 
-      <div class="logo-item">
-        <img src="static/vea.png" alt="Vea">
+        <div class="logo-item"><img src="static/exp_grangys.png" alt="Empresa 1"></div>
+        <div class="logo-item"><img src="static/exp_timbo.png" alt="Empresa 2"></div>
+        <div class="logo-item"><img src="static/exp_lucchetti.png" alt="Empresa 3"></div>
+        <div class="logo-item"><img src="static/exp_instacarro.png" alt="Empresa 4"></div>
+        <div class="logo-item"><img src="static/exp_hileret.png" alt="Empresa 5"></div>
+        <div class="logo-item"><img src="static/exp_urdapilleta.png" alt="Empresa 6"></div>
+        <div class="logo-item"><img src="static/exp-gaia.png" alt="Empresa 7"></div>
       </div>
-
-      <div class="logo-item">
-        <img src="static/molinoCañuelas.png" alt="Molino Cañuelas">
-      </div>
-
-      <div class="logo-item">
-        <img src="static/molinosRdlP.png" alt="Molinos Rio de la Plata">
-      </div>
-
-      <div class="logo-item">
-        <img src="static/kimberlyClark.png" alt="Kimbrely Clark">
-      </div>
-
-      <div class="logo-item">
-        <img src="static/nabisco.png" alt="Nabisco">
-      </div>
-
     </div>
   </div>
 </div>
@@ -562,6 +569,20 @@
     el.style.animationPlayState = 'paused';
     statsObserver.observe(el);
   });
+  // Calcula el ancho exacto del primer set de logos para el loop perfecto
+const track = document.querySelector('.logos-track');
+if (track) {
+  const items = track.querySelectorAll('.logo-item');
+  const half = Math.floor(items.length / 2);
+  let width = 0;
+  const gap = 64;
+  for (let i = 0; i < half; i++) {
+    width += items[i].offsetWidth + gap;
+  }
+  track.style.setProperty('--track-width', `-${width}px`);
+  track.style.animation = 'none';
+  track.style.animation = 'scrollLogosExact 24s linear infinite';
+}
 </script>
 
 </body>
