@@ -5,19 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mercedes Mahlknecht – Marketing</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/styles.css?v=3">
+<link rel="stylesheet" href="static/styles.css?v=4">
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Mercedes <em>Mahlknecht</em></div>
+  <button class="nav-toggle" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#como-trabajo">Como trabajo</a></li>
-    <li><a href="#experiencia">Experiencia</a></li>
-    <li><a href="#testimonios">Testimonios</a></li>
-    <li><a href="#sobre-mi">Sobre mi</a></li>
+    <li><a href="#servicios" onclick="document.querySelector('.nav-links').classList.remove('open'); document.querySelector('.nav-toggle').classList.remove('open')">Servicios</a></li>
+    <li><a href="#como-trabajo" onclick="document.querySelector('.nav-links').classList.remove('open'); document.querySelector('.nav-toggle').classList.remove('open')">Como trabajo</a></li>
+    <li><a href="#experiencia" onclick="document.querySelector('.nav-links').classList.remove('open'); document.querySelector('.nav-toggle').classList.remove('open')">Experiencia</a></li>
+    <li><a href="#testimonios" onclick="document.querySelector('.nav-links').classList.remove('open'); document.querySelector('.nav-toggle').classList.remove('open')">Testimonios</a></li>
+    <li><a href="#sobre-mi" onclick="document.querySelector('.nav-links').classList.remove('open'); document.querySelector('.nav-toggle').classList.remove('open')">Sobre mi</a></li>
   </ul>
 </nav>
 
