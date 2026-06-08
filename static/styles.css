@@ -643,6 +643,11 @@
   .como-imagen img { height: 260px; }
   .como-pilares { grid-template-columns: 1fr; }
 }
+@media (max-width: 1500px) and (min-width: 1000px) {
+  .como-header { gap: 20px; }
+  .como-content-p { font-size: 1rem; }
+  .como-resultado { font-size: 1rem; }
+}
 
   /* POR QUE NOSOTROS */
   #por-que {
